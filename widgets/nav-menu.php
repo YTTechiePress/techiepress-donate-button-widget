@@ -9,14 +9,6 @@ use Elementor\Widget_Base;
  */
 
 class Nav_Menu extends Widget_Base {
-
-    public function __construct( $data = [], $args = null ) {
-        parent::__construct( $data , $args );
-
-        wp_enqueue_script( 'techiepress-menu-js', plugin_dir_url( __FILE__ ) . '../assets/js/menu.js' );
-        wp_enqueue_style( 'techiepress-menu-css', plugin_dir_url( __FILE__ ) . '../assets/css/menu.css' );
-        
-    }
     
     public function get_name() {
         return 'techiePress-menu';
@@ -32,39 +24,29 @@ class Nav_Menu extends Widget_Base {
     }
 
     public function get_categories() {
+        // TODO: Add out own category in Elementor.
         return ['techiepress'];
+
+        // pro-elements
+        // woocommerce-elements
+        // general
+        // basic
     }
 
     public function _register_control() {
 
     }
 
-    public function get_style_depends() {
-        return ['techiepress-menu-css'];
-    }
-
-    public function get_script_depends() {
-        return ['techiepress-menu-js'];
-    }
-
-    // front end.
     protected function render() {
-        echo wp_nav_menu(
-            array(
-                'container'  => '',
-                'menu_class' => 'techiepress-menu',
-            )
-        );
+        ?>
+            <div>Hello widget</div>
+        <?php
     }
 
-    // Back end.
     protected function _content_template() {
-        echo wp_nav_menu(
-            array(
-                'container'  => '',
-                'menu_class' => 'techiepress-menu',
-            )
-        );
+        ?>
+            <div>Hello widget</div>
+        <?php
     }
 
 }
