@@ -1,0 +1,11 @@
+.techiepress-menu {
+    background: red;
+    color: white;
+}
+
+.techiepress-menu li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+
