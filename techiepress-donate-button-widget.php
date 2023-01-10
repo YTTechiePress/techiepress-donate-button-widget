@@ -55,7 +55,6 @@ final class TechiePressElementorWidgets {
 
         // Register widget with elementor.
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Nav_Menu() );
-
     }
 
     public static function get_instance() {
